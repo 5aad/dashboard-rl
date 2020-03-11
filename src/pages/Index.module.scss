@@ -1,0 +1,210 @@
+@import "../components/variables.scss";
+
+.divider {
+  position: absolute;
+  fill: $color-background;
+  width: 100%;
+}
+
+.dividerBottom {
+  composes: divider;
+  bottom: 0;
+}
+
+.dividerTop {
+  composes: divider;
+  top: 0;
+  transform: rotate(180deg);
+}
+
+.landing {
+  height: 105vh;
+  width: 100vw;
+  overflow-y: hidden;
+  position: relative;
+
+  .verticleCenter {
+    padding: 2rem 5rem;
+  }
+}
+
+.landingBackground {
+  height: 100%;
+  width: 100%;
+  background-image: url("/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  filter: brightness(25%);
+}
+
+.hoverArrow {
+  z-index: 5;
+  position: absolute;
+  bottom: 7vh;
+  stroke: #fff;
+  left: 50%;
+  margin-left: -2.5rem;
+  width: 5rem;
+  transition: stroke 0.25s;
+  composes: float from "../components/animations.scss";
+
+  &:hover {
+    stroke: $color-primary;
+  }
+}
+
+.verticleCenter {
+  position: absolute;
+  top: 0;
+  composes: verticleCenter from "../components/global.scss";
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin: 0;
+  font-weight: normal;
+
+  &:last-child {
+    color: $color-primary;
+    font-weight: bold;
+  }
+}
+
+.button {
+  text-transform: uppercase;
+  padding: 0.5rem 1.5rem;
+  white-space: nowrap;
+  min-width: 16rem;
+  max-width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.25s, max-width 1s;
+  margin: 1rem;
+  background-color: $color-background;
+
+  &:not(:disabled) {
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $color-background-light;
+    }
+  }
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.textTransition {
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+
+.close {
+  composes: button;
+  display: none;
+}
+
+.tradePanel {
+  composes: gradient-transition from "../components/animations.scss";
+  background-image: linear-gradient(135deg, $color-primary 20%, $color-secondary);
+  scroll-snap-align: start;
+  height: calc(100vh + 2 * 4vw);
+  width: 100vw;
+  padding: calc(4vw + 1rem) 1rem;
+  overflow-y: hidden;
+  position: relative;
+  display: grid;
+  grid-template: 90px 1fr 90px / 1fr;
+  gap: 1rem;
+  grid-template-areas:
+    "ad-1"
+    "content"
+    "ad-2";
+
+  .tradeContent {
+    grid-area: content;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    display: grid;
+    grid-template: 1fr auto 1fr / 1fr;
+    gap: 1rem;
+    grid-template-areas:
+      "blank"
+      "buttons"
+      "info";
+
+    & > div {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    grid-area: buttons;
+  }
+
+  .infoText {
+    grid-area: info;
+    align-self: start;
+  }
+
+  .dividerBottom {
+    fill: $color-background-light;
+    transform: scale(-1, 1);
+  }
+}
+
+.howToTrade {
+  padding: 1rem;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  .step {
+    padding: 0.5rem;
+  }
+}
+
+/*** Medium+ ***/
+@media only screen and (min-width: 992px) {
+  .landingPanel > h1 {
+    font-size: 4rem;
+  }
+  .tradePanel {
+    grid-template: 1fr / 160px 1fr 160px;
+    grid-template-areas: "ad-1 content ad-2";
+    font-size: 1.2rem;
+
+    .tradeContent {
+      padding: 0 15%;
+
+    }
+
+    .buttons {
+      flex-direction: row;
+    }
+  }
+
+  .howToTrade {
+    padding: 3rem 1rem;
+
+    h1 {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .steps {
+    flex-direction: row;
+    .step {
+      flex-basis: 25%;
+    }
+  }
+}

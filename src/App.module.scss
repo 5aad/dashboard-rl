@@ -1,0 +1,71 @@
+@import "./components/variables.scss";
+
+/*** General CSS ***/
+:global {
+  * {
+    box-sizing: border-box;
+  }
+
+  body,
+  html {
+    position: relative;
+    min-height: 100%;
+    font-family: "Maven Pro", sans-serif;
+    font-size: calc(1vh + 6px);
+    background-color: $color-background;
+    color: #fff;
+    margin: 0;
+    scroll-behavior: scroll;
+  }
+
+  main {
+    padding: none;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    min-height: 100vh;
+    scroll-snap-type: y proximity;
+  }
+
+  /*** Remove Focus Outline ***/
+  *:focus {
+    outline: none;
+  }
+
+  button::-moz-focus-inner {
+    border: 0;
+  }
+
+  /*** Text Elements ***/
+  a {
+    text-decoration: none;
+    color: #fff;
+    &:hover,
+    &:focus,
+    &:active {
+      color: #ccc;
+      text-decoration: underline;
+    }
+  }
+
+  /*** Scrollbar ***/
+  /*::-webkit-scrollbar {
+    width: 0.6rem;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $color-primary;
+    border-radius: 0.6rem;
+  }
+*/
+  //Button Styling
+  button {
+    font-family: "Maven Pro", sans-serif;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}

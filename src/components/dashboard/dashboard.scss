@@ -1,0 +1,231 @@
+body {
+  overflow-x: hidden;
+  background-image: url("./images/rl.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+  background-color: #301C69;
+  z-index: 2;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 20px 0 rgba(0,0,0,3.12);
+  border-right: none !important;
+
+}
+small{
+  font-size: 11px;
+}
+.imgsiz{
+  height: 40px;
+  width: 160px;
+  margin-left: 15px;
+}
+#sidebar-wrapper .sidebar-heading {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 25px;
+  padding-bottom: 5px;
+  font-size: 1.2rem;
+  color: white;
+}
+#sidebar-wrapper .sidebar-headings {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 2px;
+  font-size: 1.2rem;
+  color: white;
+}
+.list-group-item {
+  background-color: #301C69;
+  border: none;
+  padding: 0.75rem 3rem;
+}
+.list-group-item-action {
+  color: white;
+}
+
+.list-group-item-action:focus{
+  background-color:#4C2BA7 ;
+  color: white;
+  z-index: 5 !important;
+}
+.list-group-item-action:hover{
+  background-color:#4C2BA7 ;
+  color: white;
+  z-index: 5 !important;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 5px 0 rgba(0,0,0,0.12);
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+  
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.5); /* Black w/opacity/see-through */
+ 
+  font-weight: bold;
+  border-radius: 10px;
+  z-index: 2;
+  padding: 20px;
+  
+}
+
+.bg-texta {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.5); /* Black w/opacity/see-through */
+ 
+  font-weight: bold;
+ 
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 2;
+  color: white;
+  
+}
+
+.bg-textb {
+  background-color:#4C2BA7; /* Fallback color */
+   /* Black w/opacity/see-through */
+  font-weight: bold;
+  height: 80px;
+  border-radius: 10px;
+  z-index: 2;
+  padding: 20px;
+  text-align: center;
+}
+
+.bg-textc {
+  background-color:#4C2BA7; /* Fallback color */
+   /* Black w/opacity/see-through */
+  font-size: small;
+height: 80px;
+  border-radius: 10px;
+  z-index: 2;
+  padding: 10px;
+  text-align: center;
+}
+.bg-textd {
+  background-color:#38207D; /* Fallback color */
+   /* Black w/opacity/see-through */
+   margin-top: 8px;
+  font-size: small;
+  border-radius: 10px;
+  z-index: 2;
+
+  padding: 5px 5px;
+  text-align: center;
+}
+
+.bg-texte {
+  background-color:#38207D; /* Fallback color */
+   /* Black w/opacity/see-through */
+   margin-top: 8px;
+  font-size: small;
+  border-radius: 10px;
+  z-index: 2;
+
+  padding: 5px 5px;
+  text-align: center;
+}
+.ce{
+  justify-content: center
+}
+
+.grad {
+  background-image: linear-gradient(-90deg, #4A00E0 , #6328DB);
+}
+
+@media (min-width: 1200px){
+  .containers {
+    max-width: 80% !important;
+    align-items: center;
+  }
+}
+
+.bb{
+  border-radius: 10px;
+  padding: 0px 20px;
+}
+
+.btn-primary{
+background-color:#3E0CA2 ;
+border-color: #3E0CA2;
+}
+
+
+
+
+// .project-tab {
+//   padding: 10%;
+//   margin-top: -8%;
+// }
+.project-tab #tabs{
+  background: #007b5e;
+  color: #eee;
+}
+.project-tab #tabs h6.section-title{
+  color: #eee;
+}
+.project-tab #tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: white;
+  background-color: transparent;
+  border-color: transparent transparent #f3f3f3;
+  border-bottom: 3px solid !important;
+  font-size: 16px;
+  font-weight: bold;
+}
+.project-tab .nav-link {
+  border: 1px solid transparent;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+  color: grey;
+  font-size: 16px;
+  font-weight: 600;
+}
+.project-tab .nav-link:hover {
+  border: none;
+}
+.project-tab thead{
+  background: #f3f3f3;
+  color: #333;
+}
+.project-tab a{
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}

@@ -1,0 +1,139 @@
+@import "../variables.scss";
+
+.nav {
+  min-height: 4rem;
+  width: 100%;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 1.2rem;
+  background-color: $color-background-light;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  /*** Mobile ***/
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+}
+
+.logo {
+  img {
+    height: 3rem;
+    padding: 0.25rem 0;
+  }
+}
+
+.toggle {
+  color: #fff;
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  &:hover {
+    color: #ccc;
+  }
+}
+
+.content {
+  flex: 1 0 100%;
+  flex-direction: column;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  overflow: hidden;
+
+  &.show {
+    display: flex;
+    max-height: 100vh;
+    transition: max-height 0.2s ease-in;
+  }
+}
+
+.navbar {
+  display: flex;
+  margin: 0;
+  list-style: none;
+  flex-direction: column;
+  flex-basis: auto;
+  /*** Mobile ***/
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  padding: 0 0.5rem;
+  align-items: center;
+  /*** Mobile ***/
+  padding: 0.5rem 0;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration-line: none;
+  transition: color 0.25s;
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+/*** Medium+ ***/
+@media only screen and (min-width: 992px) {
+  .nav {
+    background-color: transparent;
+  }
+
+  .content,
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    max-height: unset;
+  }
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .toggle {
+    display: none;
+  }
+  .navbarRight {
+    composes: navbar;
+    justify-content: flex-end;
+  }
+  .item {
+    padding: 0 2rem;
+  }
+}
+
+//User
+.user {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  max-width: 100%;
+
+  @media only screen and (min-width: 992px) {
+    & {
+      width: auto;
+      max-width: 15rem;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .userName {
+    margin: 0 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0 0.25rem;
+  }
+
+  .userAvatar {
+    height: 2.5rem;
+    border-radius: 0.5rem;
+  }
+}

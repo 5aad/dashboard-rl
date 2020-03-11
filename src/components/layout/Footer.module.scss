@@ -1,0 +1,57 @@
+@import "../variables.scss";
+
+main {
+    min-height: 100vh;
+}
+
+.footer {
+  width: 100%;
+  bottom: 0;
+  padding: 1rem;
+  background-color: $color-background-light;
+  color: #fff;
+  display: grid;
+  grid-template: auto auto / 1fr;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+.icon {
+  fill: #fff;
+  height: 2rem;
+  margin: 0.25rem;
+}
+
+.iconLink {
+  display: flex;
+  align-items: center;
+  margin: 0.25rem 0;
+
+  &:hover,
+  &:focus,
+  &:active {
+    .icon {
+      fill: #ccc;
+    }
+  }
+
+  span {
+      margin: 0 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .footer {
+    grid-template: 1fr / 1fr 1fr;
+    justify-content: space-around;
+  }
+  .item {
+    align-items: center;
+  }
+}

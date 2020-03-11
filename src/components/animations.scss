@@ -1,0 +1,26 @@
+@keyframes float {
+  from {
+    transform: translatey(0);
+  }
+  to {
+    transform: translatey(-1em);
+  }
+}
+
+.float {
+  animation: float 1.5s infinite alternate;
+}
+
+.gradient-transition {
+  background-size: 150% 150%;
+  animation: gradient-transition 3s linear infinite alternate;
+}
+
+@keyframes gradient-transition {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
