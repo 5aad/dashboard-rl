@@ -10,6 +10,14 @@ import adgate from "../images/adgate.png"
 import wannads from "../images/wannads.png"
 import rlsupply1 from "../images/rlsupply1.png"
 import dollar from "../images/dollar.png"
+
+import earn from "../images/view-dashboard.png"
+import users from "../images/account-multiple.png"
+import cart from "../images/cart.png"
+import faq from "../images/frequently-asked-questions.png"
+import rank from "../images/rank.png"
+import setting from "../images/settings.png"
+import wallet from "../images/wallet-travel.png"
 class Dashbord extends React.Component {
 
   render(){
@@ -22,7 +30,8 @@ class Dashbord extends React.Component {
 <div className="   border-right " id="sidebar-wrapper">
   <div className="sidebar-heading"><img alt="" src={rlsupply1} className="imgsiz"/> 
   <div className="bg-textc mt-3 ">
-      <p className="mb-0">HighonBelvita</p>
+    {/* add fontawsome script file in public folder html file */}
+      <p className="mb-0">HighonBelvita<i className="fas fa-cog pl-4"></i></p>
       <div className="bg-textd">
         <div className="row ce" >
           <img className="pl-2 pt-1 pr-1" height="20px" alt="" src={dollar}/>
@@ -32,13 +41,13 @@ class Dashbord extends React.Component {
     </div>
   </div>
   <div className="list-group list-group-flush">
-    <a href="!#"  className="list-group-item list-group-item-action ">Earn</a>
-    <a href="!#" className="list-group-item list-group-item-action ">Store</a>
-    <a href="!#" className="list-group-item list-group-item-action ">Wallet</a>
-    <a href="!#" className="list-group-item list-group-item-action ">Leaderboard</a>
-    <a href="!#" className="list-group-item list-group-item-action ">Referrals</a>
-    <a href="!#" className="list-group-item list-group-item-action ">Settings</a>
-    <a href="!#" className="list-group-item list-group-item-action ">FAQ</a>
+  <a href="!#"  className="list-group-item list-group-item-action "><img className=" pr-3" alt="" src={earn} height="20px"/>Earn</a>
+    <a href="!#" className="list-group-item list-group-item-action "><img className=" pr-3" alt="" src={cart} height="20px"/>Store</a>
+    <a href="!#" className="list-group-item list-group-item-action "><img className=" pr-3" alt="" src={wallet} height="20px"/>Wallet</a>
+    <a href="!#" className="list-group-item list-group-item-action "><img className=" pr-3" alt="" src={rank} height="20px"/>Leaderboard</a>
+    <a href="!#" className="list-group-item list-group-item-action "><img className=" pr-3" alt="" src={users} height="20px"/>Referrals</a>
+    <a href="!#" className="list-group-item list-group-item-action "><img className=" pr-3" alt="" src={setting} height="20px"/>Settings</a>
+    <a href="!#" className="list-group-item list-group-item-action "><img className=" pr-3" alt="" src={faq} height="20px"/>FAQ</a>
   </div>
   <div className="sidebar-headings">
     <div className="bg-texte">
