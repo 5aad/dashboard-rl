@@ -23,6 +23,10 @@ import { Tabs } from "antd";
 const { TabPane } = Tabs;
 
 class Dashbord extends React.Component {
+  state = {
+    selectedTab: "SURVEY"
+  };
+
   render() {
     return (
       <>
@@ -106,7 +110,7 @@ class Dashbord extends React.Component {
           <div id="page-content-wrapper">
             <div className="container-fluid">
               <div className="bg-image ">
-                <div className="mx-5 pt-1  ">
+                <div className="mx-3 pt-1  ">
                   <div className="bg-texta my-1 ">
                     <div className="container ">
                       <div className="row  ce">
@@ -164,7 +168,7 @@ class Dashbord extends React.Component {
                   <div className="bg-textb my-2">
                     <img alt="" src={dollar} />
                   </div>
-                  <div className="bg-text" style={{ height: "80vh" }}>
+                  <div className="bg-text" style={{ height: "86vh" }}>
                     <div className="containers container ">
                       <section id="tabs" className="project-tab">
                         <div className="row">
@@ -176,26 +180,40 @@ class Dashbord extends React.Component {
                                 role="tablist"
                               >
                                 <a
-                                  className="nav-item nav-link active"
+                                  className={`nav-item nav-link ${
+                                    this.state.selectedTab == "SURVEY"
+                                      ? "active"
+                                      : ""
+                                  }`}
                                   id="nav-home-tab"
                                   data-toggle="tab"
                                   href="#nav-home"
                                   role="tab"
                                   aria-controls="nav-home"
                                   aria-selected="true"
+                                  onClick={() =>
+                                    this.setState({ selectedTab: "SURVEY" })
+                                  }
                                 >
                                   <h2 style={{ color: "white" }}>
                                     Surveys/Downloads
                                   </h2>
                                 </a>
                                 <a
-                                  className="nav-item nav-link"
+                                  className={`nav-item nav-link ${
+                                    this.state.selectedTab == "VIDEOS"
+                                      ? "active"
+                                      : ""
+                                  }`}
                                   id="nav-profile-tab"
                                   data-toggle="tab"
                                   href="#nav-profile"
                                   role="tab"
                                   aria-controls="nav-profile"
                                   aria-selected="false"
+                                  onClick={() =>
+                                    this.setState({ selectedTab: "VIDEOS" })
+                                  }
                                 >
                                   <h2 style={{ color: "white" }}>Videos</h2>
                                 </a>
@@ -259,14 +277,12 @@ class Dashbord extends React.Component {
                                       hghts="30px"
                                     />
                                   </div>
-                                  <div className="col-md-3 pl-md-0">
-                                    <div className="card grad">
-                                      <div className="card-body">
-                                        <h5 className="card-title text-white mb-1">
-                                          Comming Soon
-                                        </h5>
-                                      </div>
-                                    </div>
+                                  <div className="col-md-3 pl-md-0 pr-md-1">
+                                    <BtnBrand
+                                      classNames="pl-4"
+                                      imgs={hideout}
+                                      hghts="30px"
+                                    />
                                   </div>
                                 </div>
                               </div>

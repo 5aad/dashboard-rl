@@ -43,6 +43,7 @@ small {
   color: white;
   position: absolute;
   bottom: 0;
+  margin-bottom: 1em;
 }
 .list-group-item {
   background-color: #301c69;
@@ -223,4 +224,11 @@ small {
   text-decoration: none;
   color: #333;
   font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+  .containers {
+    max-width: 50% !important;
+    align-items: center;
+  }
 }
