@@ -176,6 +176,7 @@ small {
 }
 .grad .steam-group {
   padding: 2.3em !important;
+  cursor: pointer;
 }
 .grad .card-body img {
   padding-left: 0 !important;
@@ -267,4 +268,8 @@ small {
   width: 100%;
   height: 400px;
   margin-top: 2em;
+}
+
+.adsend img {
+  margin-left: -7px;
 }

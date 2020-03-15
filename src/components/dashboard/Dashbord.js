@@ -231,7 +231,7 @@ class Dashbord extends React.Component {
                                   aria-labelledby="nav-home-tab"
                                 >
                                   <div className="row">
-                                    <div className="col-md-3 pl-md-1 pr-md-1 ">
+                                    <div className="col-md-3 pl-md-1 pr-md-1 adsend">
                                       <BtnBrand imgs={adscend} hghts="30px" />
                                     </div>
                                     <div className="col-md-3 pl-md-0 pr-md-1 ">
