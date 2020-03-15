@@ -108,9 +108,9 @@ class Dashbord extends React.Component {
           {/* 
 <!-- Page Content --> */}
           <div id="page-content-wrapper">
-            <div className="container-fluid">
-              <div className="bg-image ">
-                <div className="mx-3 pt-1  ">
+            <div className="container-fluid h-100">
+              <div className="bg-image h-100">
+                <div className="mx-3 pt-1  h-100">
                   <div className="bg-texta my-1 ">
                     <div className="container ">
                       <div className="row  ce">
@@ -168,7 +168,7 @@ class Dashbord extends React.Component {
                   <div className="bg-textb my-2">
                     <img alt="" src={dollar} />
                   </div>
-                  <div className="bg-text" style={{ height: "86vh" }}>
+                  <div className="bg-text" style={{ height: "88%" }}>
                     <div className="containers container ">
                       <section id="tabs" className="project-tab">
                         <div className="row">
@@ -180,7 +180,7 @@ class Dashbord extends React.Component {
                                 role="tablist"
                               >
                                 <a
-                                  className={`nav-item nav-link ${
+                                  className={`nav-item nav-link mr-4 ${
                                     this.state.selectedTab == "SURVEY"
                                       ? "active"
                                       : ""
@@ -200,7 +200,7 @@ class Dashbord extends React.Component {
                                   </h2>
                                 </a>
                                 <a
-                                  className={`nav-item nav-link ${
+                                  className={`nav-item nav-link ml-2 ${
                                     this.state.selectedTab == "VIDEOS"
                                       ? "active"
                                       : ""
@@ -219,99 +219,104 @@ class Dashbord extends React.Component {
                                 </a>
                               </div>
                             </nav>
-                            <div
-                              className="tab-content mt-3"
-                              id="nav-tabContent"
-                            >
+                            {this.state.selectedTab == "SURVEY" ? (
                               <div
-                                className="tab-pane fade show active"
-                                id="nav-home"
-                                role="tabpanel"
-                                aria-labelledby="nav-home-tab"
+                                className="tab-content mt-4"
+                                id="nav-tabContent"
                               >
-                                <div className="row">
-                                  <div className="col-md-3 pr-md-1">
-                                    <BtnBrand imgs={adscend} hghts="30px" />
+                                <div
+                                  className="tab-pane fade show active"
+                                  id="nav-home"
+                                  role="tabpanel"
+                                  aria-labelledby="nav-home-tab"
+                                >
+                                  <div className="row">
+                                    <div className="col-md-3 pl-md-1 pr-md-1 adsend">
+                                      <BtnBrand imgs={adscend} hghts="30px" />
+                                    </div>
+                                    <div className="col-md-3 pl-md-0 pr-md-1 ">
+                                      <BtnBrand
+                                        classNames="pl-4"
+                                        imgs={kiwiwall}
+                                        hghts="30px"
+                                      />
+                                    </div>
+                                    <div className="col-md-3 pl-md-0 pr-md-1 ">
+                                      <BtnBrand
+                                        classNames="pl-4"
+                                        imgs={offertoro}
+                                        hghts="30px"
+                                      />
+                                    </div>
+                                    <div className="col-md-3 pl-md-0 pr-md-1 ">
+                                      <BtnBrand
+                                        classNames="pl-4"
+                                        imgs={adgate}
+                                        hghts="30px"
+                                      />
+                                    </div>
                                   </div>
-                                  <div className="col-md-3 pl-md-0 pr-md-1">
-                                    <BtnBrand
-                                      classNames="pl-4"
-                                      imgs={kiwiwall}
-                                      hghts="30px"
-                                    />
-                                  </div>
-                                  <div className="col-md-3 pl-md-0 pr-md-1">
-                                    <BtnBrand
-                                      classNames="pl-4"
-                                      imgs={offertoro}
-                                      hghts="30px"
-                                    />
-                                  </div>
-                                  <div className="col-md-3 pl-md-0">
-                                    <BtnBrand
-                                      classNames="pl-4"
-                                      imgs={adgate}
-                                      hghts="30px"
-                                    />
+                                  <div className="row mt-2">
+                                    <div className="col-md-3 pl-md-1 pr-md-1 ">
+                                      <BtnBrand
+                                        classNames="py-2 pl-4"
+                                        imgs={wannads}
+                                        hghts="30px"
+                                      />
+                                    </div>
+                                    <div className="col-md-3 pl-md-0 pr-md-1 ">
+                                      <BtnBrand
+                                        classNames="pl-4"
+                                        imgs={personally}
+                                        hghts="30px"
+                                      />
+                                    </div>
+                                    <div className="col-md-3 pl-md-0 pr-md-1 ">
+                                      <BtnBrand
+                                        classNames="pl-4"
+                                        imgs={hideout}
+                                        hghts="30px"
+                                      />
+                                    </div>
+                                    <div className="col-md-3 pl-md-0 pr-md-1 ">
+                                      <BtnBrand
+                                        classNames="pl-4"
+                                        imgs={hideout}
+                                        hghts="30px"
+                                        text="Coming Soon"
+                                      />
+                                    </div>
                                   </div>
                                 </div>
-                                <div className="row mt-2">
-                                  <div className="col-md-3 pr-md-1">
-                                    <BtnBrand
-                                      classNames="py-2 pl-4"
-                                      imgs={wannads}
-                                      hghts="30px"
-                                    />
-                                  </div>
-                                  <div className="col-md-3 pl-md-0 pr-md-1">
-                                    <BtnBrand
-                                      classNames="pl-4"
-                                      imgs={personally}
-                                      hghts="30px"
-                                    />
-                                  </div>
-                                  <div className="col-md-3 pl-md-0 pr-md-1">
-                                    <BtnBrand
-                                      classNames="pl-4"
-                                      imgs={hideout}
-                                      hghts="30px"
-                                    />
-                                  </div>
-                                  <div className="col-md-3 pl-md-0 pr-md-1">
-                                    <BtnBrand
-                                      classNames="pl-4"
-                                      imgs={hideout}
-                                      hghts="30px"
-                                    />
-                                  </div>
+                                <div
+                                  className="tab-pane fade"
+                                  id="nav-profile"
+                                  role="tabpanel"
+                                  aria-labelledby="nav-profile-tab"
+                                >
+                                  <h5>Videos</h5>
                                 </div>
                               </div>
-                              <div
-                                className="tab-pane fade"
-                                id="nav-profile"
-                                role="tabpanel"
-                                aria-labelledby="nav-profile-tab"
-                              >
-                                <h5>Videos</h5>
-                              </div>
-                            </div>
+                            ) : (
+                              <div className="video-section "></div>
+                            )}
                           </div>
                         </div>
                       </section>
 
-                      <div className="text-center my-3 mt-5">
-                        <h2 className="text-white">Bonus</h2>
+                      <div className="text-center mb-3 mt-5">
+                        <h2 className="text-white pt-4">Bonus</h2>
                       </div>
                       <div className="row mt-2">
-                        <div className="col-md-6 pr-1">
+                        <div className="col-md-6 pl-md-1 pr-1">
                           <Cards />
                         </div>
                         <div className="col-md-6 pr-1">
                           <Cards />
                         </div>
                       </div>
-                      <div className="row mt-2">
-                        <div className="col-md-6 pr-1">
+                      <div className="row mt-2 pb-4">
+                        <div className="col-md-6 pl-md-1 pr-1">
                           <Cards />
                         </div>
                         <div className="col-md-6 pr-1">

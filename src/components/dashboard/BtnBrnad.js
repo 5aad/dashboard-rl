@@ -8,7 +8,10 @@ class BtnBrand extends React.Component {
     <div className="card grad">
         <div className="card-body ">
         {/* <h5 className="card-title text-white">Comming Soon</h5> */}
-        <img className={this.props.classNames} alt="#" src={this.props.imgs} height={this.props.hghts} />
+
+
+  {this.props.text ? (<span>{this.props.text}</span>):(        <img className={this.props.classNames} alt="#" src={this.props.imgs} height={this.props.hghts} />
+) }
         </div>
 
     </div>
@@ -22,7 +25,7 @@ export  class Cards extends React.Component {
   return (
     <>
     <div className="card grad">
-        <div className="card-body ">
+        <div className="card-body steam-group">
           
         <h5 className="card-title text-white float-left mr-5">Join our steam group<br/> +1000</h5>
         {/* add fontawsome script file in public folder html file */}

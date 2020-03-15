@@ -72,6 +72,7 @@ small {
 
 #page-content-wrapper {
   min-width: 100vw;
+  margin-bottom: 2em;
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -166,11 +167,27 @@ small {
 
 .grad {
   background-image: linear-gradient(-90deg, #4a00e0, #6328db);
+  text-align: center;
+  border-radius: 10px;
 }
 
+.grad .card-body {
+  padding: 2.05rem !important;
+}
+.grad .steam-group {
+  padding: 2.3em !important;
+  cursor: pointer;
+}
+.grad .card-body img {
+  padding-left: 0 !important;
+}
+.grad .card-body span {
+  font-size: 1.4em;
+  color: white;
+}
 @media (min-width: 1200px) {
   .containers {
-    max-width: 80% !important;
+    max-width: 750px !important;
     align-items: center;
   }
 }
@@ -196,12 +213,15 @@ small {
 .project-tab #tabs h6.section-title {
   color: #eee;
 }
+.project-tab .nav-tabs {
+  justify-content: center;
+}
 .project-tab #tabs .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
   color: white;
   background-color: transparent;
   border-color: transparent transparent #f3f3f3;
-  border-bottom: 3px solid !important;
+  border: none;
   font-size: 16px;
   font-weight: bold;
 }
@@ -212,9 +232,10 @@ small {
   color: grey;
   font-size: 16px;
   font-weight: 600;
+  flex: 0;
 }
 .project-tab .nav-link:hover {
-  border: none;
+  border-color: transparent;
 }
 .project-tab thead {
   background: #f3f3f3;
@@ -226,9 +247,29 @@ small {
   font-weight: 600;
 }
 
+.project-tab .nav-tabs {
+  border-bottom: none;
+}
+
 @media (min-width: 1200px) {
   .containers {
-    max-width: 50% !important;
+    max-width: 850px !important;
     align-items: center;
   }
+}
+
+.nav-link.active h2 {
+  display: inline;
+  border-color: transparent transparent #f3f3f3;
+  border-bottom: 3px solid !important;
+}
+.video-section {
+  background-color: lightgrey;
+  width: 100%;
+  height: 400px;
+  margin-top: 2em;
+}
+
+.adsend img {
+  margin-left: -12px;
 }
